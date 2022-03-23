@@ -6,6 +6,7 @@ namespace Jogo_da_Forca.Entities
 {
     static class Acentos
     {
+
         public static char[] VerificarAcentos(char letra)
         {
             char[] arryEscolhida = new char[5];        
