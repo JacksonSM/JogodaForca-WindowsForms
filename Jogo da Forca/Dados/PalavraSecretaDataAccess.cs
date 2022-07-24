@@ -4,14 +4,13 @@ using System.Text;
 using System.Data.SqlServerCe;
 using System.Data;
 using Jogo_da_Forca.Model;
-
+using System.IO;
 
 namespace Jogo_da_Forca.Dados
 {
     class PalavraSecretaDataAccess
     {
-        //Coloque o diretório do banco de dados local aqui
-        private static SqlCeConnection con = new SqlCeConnection(@"Data Source=F:\Projetos de Estudo\Projetos C#\Jogo da Forca\Jogo da Forca\Dados\banco.sdf");
+        private static SqlCeConnection con = new SqlCeConnection("Data Source="+ Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "\\Dados\\banco.sdf");
 
         public static bool SalvarPalavraSecreta(Jogo_da_Forca.Model.PalavraSecretaBanco palavraSecreta)
         {
